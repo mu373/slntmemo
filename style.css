@@ -3,4 +3,69 @@
 body {
 	background: #f6f6f6;
  	font-family: "Helvetica Neue", Arial, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS P Gothic", sans-serif;
+ 	font-size: 15px;
+ 	width: 1000px;
+ 	margin: 0 auto;
+}
+
+h1 {
+	padding-top: 15px;
+	text-align: center;
+	color: #444444;
+	font-size: 300%;
+	font-weight: bold;
+	letter-spacing: -0.03em;
+	line-height: 30%;
+}
+
+h1 a:link{
+	color: #444444;
+	text-decoration: none;
+}
+
+h1 a:hover{
+	color: #5d5d5d;
+	text-decoration: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+#description {
+	text-align: center;
+	font-family:"HelveticaNeue-Thin";
+	font-size: 120%;
+	line-height: 0px;
+	letter-spacing: -0.02em;
+
+}
+
+nav {
+
+}
+
+#navigation ul li{
+	font-size: 100%; 
+	display: table-cell;
+	list-style: none;
+	font-family:"HelveticaNeue-LightItalic";
+	border-bottom: 1px solid #000000;
+	text-align: left;
+}
+
+#navigation ul{
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	/*padding-bottom: 10px;*/
+	/*border-bottom: solid 1px #ff00ff;*/
+}
+
+li a:link, a:visited{
+	color: #444444;
+}
+
+li a:hover{
+	color: #000000;
 }
