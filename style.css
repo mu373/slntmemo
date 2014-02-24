@@ -4,7 +4,7 @@ body {
 	background: #f6f6f6;
  	font-family: "Helvetica Neue", Arial, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS P Gothic", sans-serif;
  	font-size: 15px;
- 	width: 1000px;
+ 	width: 900px;
  	margin: 0 auto;
 }
 
@@ -38,7 +38,6 @@ a {
 	font-size: 120%;
 	line-height: 0px;
 	letter-spacing: -0.02em;
-
 }
 
 nav {
@@ -46,20 +45,21 @@ nav {
 }
 
 #navigation ul li{
-	font-size: 100%; 
+	font-size: 90%; 
 	display: table-cell;
 	list-style: none;
 	font-family:"HelveticaNeue-LightItalic";
-	border-bottom: 1px solid #000000;
+	border-bottom: 1px solid #5c5c5c;
 	text-align: left;
+	padding-bottom: 15px;
 }
 
 #navigation ul{
 	display: table;
 	table-layout: fixed;
-	width: 100%;
-	/*padding-bottom: 10px;*/
-	/*border-bottom: solid 1px #ff00ff;*/
+	width: 900px;
+	margin-top: 50px;
+	padding: 0;
 }
 
 li a:link, a:visited{
