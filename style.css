@@ -3,9 +3,10 @@
 body {
 	background: #f6f6f6;
  	font-family: "Helvetica Neue", Arial, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS P Gothic", sans-serif;
- 	font-size: 15px;
+ 	font-size: 14px;
  	width: 900px;
  	margin: 0 auto;
+ 	line-height: 1.7em;
 }
 
 h1 {
@@ -68,4 +69,55 @@ li a:link, a:visited{
 
 li a:hover{
 	color: #000000;
+}
+
+article {
+	margin-top: 40px;
+}
+
+h2 {
+	font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+	font-size: 170%;
+	margin: 0px;
+	padding: 0px;
+}
+
+p.date {
+	margin-bottom: 40px;
+}
+
+div.content p {
+	padding-bottom: 30px;
+}
+
+div.content {
+	line-height: 1.7em;
+}
+
+article {
+	border-bottom: 1px solid #5c5c5c;
+}
+
+h3 {
+	font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+	margin: 0px;
+	padding: 0 0 0px 0;
+	line-height: 0px;
+}
+
+footer {
+	padding: 10px 0;
+	margin: 30px 0;
+	text-align: right;
+	font-family:"HelveticaNeue-ThinItalic";
+
+}
+
+li.tags{
+	list-style: none;
+	display: inline;
+}
+
+#tags ul {
+	display: table;
 }
