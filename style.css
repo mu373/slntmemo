@@ -96,6 +96,12 @@ div.body-text p{
 	margin: 0px;
 }
 
+figure {
+    display: table;
+    width: 160px; /* minimum width */
+    *width: auto; /* for IE7 and below */
+}
+
 div.photo-wrapper {
 	text-align: center;
 }
