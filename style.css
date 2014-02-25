@@ -96,8 +96,8 @@ div.body-text p{
 	margin: 0px;
 }
 
-div.photo-wrapper-inner {
-	margin: 0 auto;
+div.photo-wrapper {
+	text-align: center;
 }
 /*span.tags ul {
 	margin: 0;
