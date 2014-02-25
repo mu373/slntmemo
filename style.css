@@ -9,7 +9,7 @@ body {
  	line-height: 1.7em;
 }
 
-a:link {
+a:link,a:visited {
 	text-decoration: none;
 	color: #000000;
 }
@@ -17,6 +17,7 @@ a:link {
 a:hover {
 	color: red;
 }
+
 
 h1 {
 	padding-top: 15px;
@@ -65,8 +66,10 @@ ul#navigation li{
 }
 
 
+/* Article */
 article {
-	margin-top: 40px;
+	padding: 40px 0;
+	border-bottom: 1px solid #5c5c5c;
 }
 
 h2 {
@@ -77,42 +80,37 @@ h2 {
 	color: #000000;
 }
 
-p.date {
-	margin-bottom: 40px;
-}
-
-div.body-text p {
-	padding-bottom: 30px;
+h3 {
+	font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+	margin: 0px;
+	padding: 40px 0 0 0;
+	line-height: 0px;
 }
 
 div.body-text {
 	line-height: 1.7em;
 }
 
-article {
-	border-bottom: 1px solid #5c5c5c;
-}
-
-h3 {
-	font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+div.body-text p{
+	padding: 15px 0  0 ;
 	margin: 0px;
-	padding: 0 0 0px 0;
-	line-height: 0px;
 }
 
+/*span.tags ul {
+	margin: 0;
+	padding: 0;
+}
+
+span.tags ul li {
+	display: inline;
+}
+*/
+
+/* Footer */
 footer {
 	padding: 10px 0;
 	margin: 30px 0;
 	text-align: right;
 	font-family:"HelveticaNeue-ThinItalic";
 
-}
-
-li.tags{
-	list-style: none;
-	display: inline;
-}
-
-#tags ul {
-	display: table;
 }
