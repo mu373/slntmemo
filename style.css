@@ -100,6 +100,7 @@ figure {
     display: table;
     width: 160px; /* minimum width */
     *width: auto; /* for IE7 and below */
+    margin: 0 auto;
 }
 
 div.photo-wrapper {
