@@ -9,6 +9,15 @@ body {
  	line-height: 1.7em;
 }
 
+a:link {
+	text-decoration: none;
+	color: #000000;
+}
+
+a:hover {
+	color: red;
+}
+
 h1 {
 	padding-top: 15px;
 	text-align: center;
@@ -19,18 +28,13 @@ h1 {
 	line-height: 30%;
 }
 
+/* Header */
 h1 a:link{
 	color: #444444;
-	text-decoration: none;
 }
 
 h1 a:hover{
 	color: #5d5d5d;
-	text-decoration: none;
-}
-
-a {
-	text-decoration: none;
 }
 
 #description {
@@ -41,11 +45,16 @@ a {
 	letter-spacing: -0.02em;
 }
 
-nav {
-
+/* Navigation */
+ul#navigation{
+	display: table;
+	table-layout: fixed;
+	width: 900px;
+	margin-top: 50px;
+	padding: 0;
 }
 
-#navigation ul li{
+ul#navigation li{
 	font-size: 90%; 
 	display: table-cell;
 	list-style: none;
@@ -55,21 +64,6 @@ nav {
 	padding-bottom: 15px;
 }
 
-#navigation ul{
-	display: table;
-	table-layout: fixed;
-	width: 900px;
-	margin-top: 50px;
-	padding: 0;
-}
-
-li a:link, a:visited{
-	color: #444444;
-}
-
-li a:hover{
-	color: #000000;
-}
 
 article {
 	margin-top: 40px;
