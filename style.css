@@ -82,6 +82,7 @@ article {
 span.tags ul {
 	margin: 0;
 	padding: 0;
+	font-family: 'Entypo';
 	content: "\U+E70C";
 }
 span.tags ul li{
