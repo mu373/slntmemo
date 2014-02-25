@@ -96,6 +96,7 @@ div.body-text p{
 	margin: 0px;
 }
 
+/** Image **/
 figure {
     display: table;
     width: 160px; /* minimum width */
@@ -106,7 +107,23 @@ figure {
 div.photo-wrapper {
 	text-align: center;
 }
+
+figcaption.caption p {
+	margin: 0;
+	padding: 1em 0 0 0;
+}
+
+figcaption.caption blockquote p {
+	margin: 0;
+	padding: 0;
+}
+
+figcaption.caption blockquote {
+	padding: 0 0 0 30px;
+	margin: 0;
+}
 /*span.tags ul {
+	
 	margin: 0;
 	padding: 0;
 }
