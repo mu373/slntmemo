@@ -96,6 +96,9 @@ div.body-text p{
 	margin: 0px;
 }
 
+div.photo-wrapper-inner {
+	margin: 0 auto;
+}
 /*span.tags ul {
 	margin: 0;
 	padding: 0;
