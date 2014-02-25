@@ -79,11 +79,16 @@ article {
 	border-bottom: 1px solid #5c5c5c;
 }
 
+span.tags ul:before {
+	font-family: 'Entypo';
+	font-size: 5em;
+	content: "\1F4E3";
+	color: red;
+}
 span.tags ul {
 	margin: 0;
 	padding: 0;
-	font-family: 'Entypo';
-	content: "\U+E70C";
+
 }
 span.tags ul li{
 	display: inline;
