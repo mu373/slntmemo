@@ -86,11 +86,11 @@ p.date {
 	margin-bottom: 40px;
 }
 
-div.content p {
+div.body-text p {
 	padding-bottom: 30px;
 }
 
-div.content {
+div.body-text {
 	line-height: 1.7em;
 }
 
