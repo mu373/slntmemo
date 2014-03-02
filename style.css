@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/*** Icon Fonts ここから***/
+/* ============= アイコンフォント ============= */
 @font-face {
   font-family: 'fontello';
   src: url('../font/fontello.eot?49688757');
@@ -58,7 +58,7 @@
 .icon-calendar:before { content: '\e803'; } /* '' */
 .icon-instagram:before { content: '\e802'; } /* '' */
 
-/*** ここまで ***/
+/* ============= アイコンフォントここまで ============= */
 
 
 
@@ -67,11 +67,15 @@ body {
 	background: #fff;
  	font-family: "Helvetica Neue", Arial, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS P Gothic", sans-serif;
  	font-size: 14px;
- 	width: 900px;
- 	margin: 0 auto;
+ 	/*width: 900px;*/
+
  	line-height: 1.7em;
 }
 
+.container {
+	max-width: 900px;
+ 	margin: 0 auto;
+}
 a:link,a:visited {
 	text-decoration: none;
 	color: #000000;
@@ -112,7 +116,7 @@ h1 a:hover{
 ul#navigation{
 	display: table;
 	table-layout: fixed;
-	width: 900px;
+	width: 100%;
 	margin-top: 50px;
 	padding: 0;
 }
@@ -133,6 +137,20 @@ article {
 	border-bottom: 1px solid #5c5c5c;
 }
 
+.content pre{
+	margin: 1.3em 0;
+	padding: 1em 1.5em;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+	border-radius: 8px;
+	font-family: "Source Code Pro", sans-serif;
+	font-size: 90%;
+	line-height: 1.62;
+	white-space: pre;
+	overflow: auto;
+}
 
 
 h2 {
@@ -151,7 +169,6 @@ h3 {
 }
 
 div.date,div.tags {
-	/*display: inline-block;*/
 	margin: 0px;
 	padding: 0px;
 }
@@ -164,7 +181,6 @@ div.tags ul {
 div.tags ul li{
 	display: inline;
 	background: #e2e2e2;
-	/*color: #6a6a6a;*/
 	opacity: 0.8;
 	text-decoration: none;
 	font-size: 90%;
@@ -190,7 +206,7 @@ div.body-text p{
 /** Image **/
 figure {
     display: table;
-    width: 160px; /* minimum width */
+    /*width: 160px;*/ /* minimum width */
     *width: auto; /* for IE7 and below */
     margin: 0 auto;
 }
@@ -230,5 +246,48 @@ footer {
 	margin: 30px 0;
 	text-align: right;
 	font-family:"HelveticaNeue-ThinItalic";
+}
 
+
+/* ==========テスト =========== */
+
+/* -------- PC (over 789px) -------- */
+@media only screen and (min-width: 789px) {
+  .container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  img {
+  	max-width: 100%;
+  	height: auto;
+  }
+}
+
+/* -------- Tablet (501-788px) -------- */
+@media only screen and (min-width: 501px) and (max-width: 788px) {
+  .container {
+    max-width: 768px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+    img {
+  	max-width: 100%;
+  	height: auto;
+  }
+}
+
+/* -------- Smartphone (-500px) -------- */
+@media only screen and (max-width: 500px) {
+  body {
+    font-size: 13px;
+  }
+  .container {
+  	max-width: 480px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+    img {
+  	max-width: 100%;
+  	height: auto;
+  }
 }
