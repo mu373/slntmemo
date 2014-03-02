@@ -62,13 +62,10 @@
 
 
 
-
 body {
 	background: #fff;
  	font-family: "Helvetica Neue", Arial, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS P Gothic", sans-serif;
  	font-size: 14px;
- 	/*width: 900px;*/
-
  	line-height: 1.7em;
 }
 
@@ -76,6 +73,7 @@ body {
 	max-width: 900px;
  	margin: 0 auto;
 }
+
 a:link,a:visited {
 	text-decoration: none;
 	color: #000000;
@@ -84,7 +82,6 @@ a:link,a:visited {
 a:hover {
 	color: red;
 }
-
 
 h1 {
 	padding-top: 15px;
@@ -137,22 +134,7 @@ article {
 	border-bottom: 1px solid #5c5c5c;
 }
 
-.content pre{
-	margin: 1.3em 0;
-	padding: 1em 1.5em;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	-ms-border-radius: 8px;
-	-o-border-radius: 8px;
-	border-radius: 8px;
-	font-family: "Source Code Pro", sans-serif;
-	font-size: 90%;
-	line-height: 1.62;
-	white-space: pre;
-	overflow: auto;
-}
-
-
+/* 記事タイトル*/
 h2 {
 	font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
 	font-size: 170%;
@@ -161,6 +143,7 @@ h2 {
 	color: #000000;
 }
 
+/* 記事見出し*/
 h3 {
 	font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
 	margin: 0px;
@@ -168,6 +151,7 @@ h3 {
 	line-height: 0px;
 }
 
+/* 日付･タグ */
 div.date,div.tags {
 	margin: 0px;
 	padding: 0px;
@@ -193,15 +177,31 @@ div.tags ul li{
 	border-radius: 5px;
 }
 
-
-div.body-text {
-	line-height: 1.7em;
+/* 本文p */
+.content p {
+	margin: 0;
+	padding-top: 14px;
 }
 
-div.body-text p{
-	padding: 15px 0  0 ;
-	margin: 0px;
+/* ソースコード */
+pre{
+	margin-top: 1em;
+	padding: 1em 2em;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+	white-space: pre;
+	overflow: auto;
 }
+
+pre, code {
+	font-family: 'Source Code Pro', sans-serif;
+	font-size: 90%;
+	line-height: 1.4;
+}
+
 
 /** Image **/
 figure {
@@ -229,16 +229,7 @@ figcaption.caption blockquote {
 	padding: 0 0 0 30px;
 	margin: 0;
 }
-/*span.tags ul {
 
-	margin: 0;
-	padding: 0;
-}
-
-span.tags ul li {
-	display: inline;
-}
-*/
 
 /* Footer */
 footer {
@@ -283,7 +274,6 @@ footer {
   }
   .container {
   	max-width: 480px;
-  	/*width: 300px;*/
     padding-left: 6%;
     padding-right: 6%;
   }
