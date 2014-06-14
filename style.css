@@ -298,10 +298,15 @@ figcaption.caption blockquote {
 }
 
 .like_and_reblog_buttons {
-    border: 1px solid #e8e8e8;
-    border-radius: 3px;
-    list-style: none;
+	border: 1px solid #d5d5d5;
+	border-radius: 3px;
+	list-style: none;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	line-height: 0;
 }
+
 
 .like_and_reblog_buttons li {
     float: left;
@@ -312,6 +317,12 @@ figcaption.caption blockquote {
 
 .like_and_reblog_buttons li:first-child {
     border-right: 1px solid #e8e8e8;
+}
+
+.social-buttons div, .social-buttons a, .social-buttons iframe {
+	display: inline-block;
+	vertical-align: top !important;
+	margin-right: 4px !important;
 }
 
 .pagenation {
