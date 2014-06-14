@@ -66,13 +66,13 @@
 body {
 	/*background: #f5f5f5;*/
 	background: #ffffff;
- 	font-family: 'Lato', "Helvetica Neue", Arial, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS P Gothic", sans-serif;
- 	font-size: 16px;
+ 	font-family: 'Raleway', "Helvetica Neue", Arial, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS P Gothic", sans-serif;
+ 	font-size: 100%;
  	line-height: 1.9em;
 }
 
 .container {
-	max-width: 840px;
+	max-width: 740px;
  	margin: 0 auto;
 }
 
@@ -93,10 +93,15 @@ h1 {
 	letter-spacing: -0.03em;
 	line-height: 30%;
 	font-weight: 700;
+	text-align: center;
+}
+
+header {
+	text-align: center;
 }
 
 h1.title > a:link{
-	color: green;
+	color: #009db2;
 }
 
 h1 a:hover{
@@ -104,11 +109,11 @@ h1 a:hover{
 }
 
 #description {
-	text-align: left;
 	font-weight: 300;
 	font-size: 120%;
 	line-height: 0px;
 	letter-spacing: -0.02em;
+	color: #474a4d;
 }
 
 /* Navigation */
@@ -143,7 +148,7 @@ h2 {
 	font-size: 170%;
 	margin: 0px;
 	/*padding-bottom: 10px;*/
-	color: #000000;
+	color: #474a4d;
 }
 
 /* 記事見出し*/
@@ -152,6 +157,7 @@ h3 {
 	margin: 0px;
 	padding-bottom: 10px;
 	padding: 0;
+	color: #009db2;
 	/*line-height: 0px;*/
 }
 
