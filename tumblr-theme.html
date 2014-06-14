@@ -171,6 +171,21 @@
 {/block:Posts}
 </main>
 
+{block:Pagination}
+  <div class="pagenation pagenation-index">
+    {block:PreviousPage}
+      <a href="{PreviousPage}">Prev</a>
+    {/block:PreviousPage}
+    {block:JumpPagination length="5"}
+      {block:CurrentPage}<span class="current-page">{PageNumber}</span>{/block:CurrentPage}
+      {block:JumpPage}<a class="jump-page" href="{URL}">{PageNumber}</a>{/block:JumpPage}
+    {/block:JumpPagination}
+    {block:NextPage}
+      <a href="{NextPage}" class="next" rel="next">Next</a>
+    {/block:NextPage}
+  </div>
+{/block:Pagination}
+    
 <div id="footer">
 <footer>
         <span>© {CopyrightYears} <a href="//slntmemo.tumblr.com">//slntmemo</a>.</br></span>

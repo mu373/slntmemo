@@ -296,6 +296,51 @@ figcaption.caption blockquote {
 	font-size: 90%;
 	padding-top: 3%;
 }
+
+.pagenation {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 95%;
+	font-weight: bold;
+	letter-spacing: .1em;
+	padding: 60px 0;
+}
+
+.pagenation span, .pagenation a {
+	display: inline-block;
+	min-width: 1.2em;
+	padding: 6px 8px;
+	margin: 1px;
+	-webkit-border-top-right-radius: 3px;
+	-webkit-border-bottom-right-radius: 0;
+	-webkit-border-bottom-left-radius: 0;
+	-webkit-border-top-left-radius: 0;
+	-moz-border-radius-topright: 3px;
+	-moz-border-radius-bottomright: 0;
+	-moz-border-radius-bottomleft: 0;
+	-moz-border-radius-topleft: 0;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	border-top-left-radius: 0;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+}
+
+.pagenation .current-page {
+background: #ccc;
+color: #fff;
+}
+
+.pagenation .jump-page:hover {
+background: #ebebeb;
+}
+
+
 /* Footer */
 footer {
  	font-family: 'Open Sans', "Helvetica Neue", Arial, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS P Gothic", sans-serif;
