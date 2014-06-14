@@ -112,64 +112,121 @@
                 
 <main>
 {block:Posts}
+<article class="{PostType}">
+    <!-- posts:テキスト -->
+    {block:Text}
+        {block:Date}<div class="date"><time pubdate="##">{Year}.{MonthNumberWithZero}.{DayOfMonthWithZero} ({ShortDayOfWeek})</time></div>{/block:Date}
+        {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
 
-<!-- <article class="{block:Text}text {/block:Text}{block:Photoset}photoset {/block:Photoset}{block:Photo}photo {/block:Photo}{block:RebloggedFrom}reblogged {/block:RebloggedFrom}{block:Quote}quote {/block:Quote}{block:Link}link {/block:Link}{block:Chat}chat {/block:Chat}{block:Audio}audio {/block:Audio}{block:Video}video {/block:Video}{block:Answer}answer {/block:Answer}{block:Date}not-page post-{PostID}{/block:Date} {block:PermalinkPage} active exposed{/block:PermalinkPage}" {block:Date}data-post-id="post_{PostID}"{/block:Date}>
-                            
-                             -->
-        
+        {block:Body}
+        <div class="content">{Body}</div>
+        {/block:Body}
+    {/block:Text}
 
-
-{block:Text}
-<article class="text">
-    {block:Date}<div class="date"><time pubdate="##">{Year}.{MonthNumberWithZero}.{DayOfMonthWithZero} ({ShortDayOfWeek})</time></div>{/block:Date}
-    {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
-
-    {block:Body}
-    <div class="content">{Body}</div>
-    {/block:Body}
-
-    <div class="article-divider"></div>
-
-</article>
-{/block:Text}
-
-
-{block:Photo}
-<article class="photo">
-
-<figure class="{block:HighRes}high-res{/block:HighRes}{block:Caption} with-caption{/block:Caption}" data-photo-width="{PhotoWidth-HighRes}">
-
-    <div class="photo-wrapper">
-        <div class="photo-wrapper-inner">
-        {LinkOpenTag}
-        <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" width="{PhotoWidth-HighRes}" height="{PhotoHeight-HighRes}">
-        {LinkCloseTag}
+    <!-- posts:写真 -->
+    {block:Photo}
+    <figure class="{block:HighRes}high-res{/block:HighRes}{block:Caption} with-caption{/block:Caption}" data-photo-width="{PhotoWidth-HighRes}">
+        <div class="photo-wrapper">
+            <div class="photo-wrapper-inner">
+            {LinkOpenTag}
+            <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" width="{PhotoWidth-HighRes}" height="{PhotoHeight-HighRes}">
+            {LinkCloseTag}
+            </div>
         </div>
+        {block:Caption}
+            <figcaption class="caption">
+            {Caption}
+            </figcaption>
+        {/block:Caption}
+    </figure>
+    {/block:Photo}
+
+<!-- 記事フッタ -->
+<div class="entry-footer">
+
+    {block:RebloggedFrom}
+        <div class="rebloggedfrom">
+            <span class="meta-elements reblog-parent-name">Reblogged from <a href="{ReblogParentURL}"><img
+    src="{ReblogParentPortraitURL-16}" class="favicon"/> {ReblogParentName}</a></span>
+            <span class="meta-elements reblog-root-name">Originally posted by <a href="{ReblogRootURL}"><img
+    src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a></span>
+        </div>
+    {/block:RebloggedFrom}
+
+    <div class="meta-footer">
+        <span class="meta-elements timeago">
+            <a href="{Permalink}">{TimeAgo}</a>
+        </span>
+
+        {block:NoteCount}
+            <span class="meta-elements notecount">
+                <a href="{Permalink}">{NoteCount} Notes</a>
+            </span>
+        {/block:NoteCount}
+
+        {block:HasTags}
+            <span class="meta-elements hastags">
+                {block:Tags}
+                    <a href="{TagURL}">#{Tag}</a>
+                {/block:Tags}
+            </span>
+        {/block:HasTags}
     </div>
 
-    {block:Caption}
-        <figcaption class="caption">
-        {Caption}
-        </figcaption>
-    {/block:Caption}
+    {block:Date}
+    <div class="tumblr-controls">
+        <ul class="like-and-reblog-buttons">
+            <li>{ReblogButton}</li>
+            <li>{LikeButton}</li>
+        </ul>
+    </div>
+    {/block:Date}
 
-</figure>
+    <!-- パーマリンクだけソーシャルボタン出す -->
+    {block:PermalinkPage}
+        <ul class="social-buttons">
+            {block:IfEnableTweetButton}
+            <li class="social-button">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">ツイート</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </li>
+            {/block:IfEnableTweetButton}
 
-<div class="meta-footer">
-    <span><a href="{Permalink}">{TimeAgo}</a></span>
-    {block:NoteCount}
-        <span><a href="{Permalink}">   ·   {NoteCount} Notes</a></span>
-    {/block:NoteCount}
+            {block:IfEnableLikeButton}
+            <li class="social-button">
+                <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+            </li>
+            {/block:IfEnableLikeButton}
+
+            {block:IfEnablePlus1Button}
+                <li class="social-button">
+                <div class="g-plusone" data-size="medium"></div>
+                <script type="text/javascript">
+                    window.___gcfg = {lang: 'ja'};
+                    (function() {
+                      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                      po.src = 'https://apis.google.com/js/plusone.js';
+                      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                    })();
+                </script>
+                </li>
+            {/block:IfEnablePlus1Button}
+        </ul>
+    {/block:PermalinkPage}
+
+    {block:PostNotes}
+      <h3 class="notecount-header">{NoteCount} Notes</h3>
+      <div class="notecontainer">{PostNotes}</div>
+    {/block:PostNotes}
 </div>
+
+
 <div class="article-divider"></div>
-
 </article>
-{/block:Photo}
-
-
 
 {/block:Posts}
-</main>
+
+    <!-- ここまで -->
 
 {block:Pagination}
   <div class="pagenation pagenation-index">
@@ -185,7 +242,10 @@
     {/block:NextPage}
   </div>
 {/block:Pagination}
-    
+
+</main>
+
+
 <div id="footer">
 <footer>
         <span>© {CopyrightYears} <a href="//slntmemo.tumblr.com">//slntmemo</a>.</br></span>
