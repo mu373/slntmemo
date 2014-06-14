@@ -67,6 +67,8 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
 <script type="text/javascript" src="https://dl.dropboxusercontent.com/s/vzfccnteijx59l9/prettify.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Raleway:300,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
 <script>
 //<![CDATA[
@@ -129,46 +131,52 @@
 
 {block:Text}
 <article class="text">
+    {block:Date}<div class="date"><time pubdate="##">{Year}.{MonthNumberWithZero}.{DayOfMonthWithZero} ({ShortDayOfWeek})</time></div>{/block:Date}
     {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
-    {block:Date}<div class="date"><a href="#"><time pubdate="##">{Year}.{MonthNumberWithZero}.{DayOfMonthWithZero} ({ShortDayOfWeek})</time></a></div>
-{/block:Date}
-
-{block:HasTags}
-<div class="tags">
-    <ul>
-        <i class="icon-tag {block:Date}not-page post-{PostID}{/block:Date}" {block:Date}data-post-id="post_{PostID}"{/block:Date}></i>
-        {block:Tags}
-        <li><a href="{TagURL}">{Tag}</a></li>
-        {/block:Tags}
-    </ul>
-</div>
-{/block:HasTags}
 
     {block:Body}
     <div class="content">{Body}</div>
     {/block:Body}
+
+    <div class="article-divider"></div>
+
 </article>
 {/block:Text}
 
 
 {block:Photo}
+<article class="photo">
+
 <figure class="{block:HighRes}high-res{/block:HighRes}{block:Caption} with-caption{/block:Caption}" data-photo-width="{PhotoWidth-HighRes}">
-<div class="photo-wrapper">
 
-<div class="photo-wrapper-inner">
-{LinkOpenTag}
-<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" width="{PhotoWidth-HighRes}" height="{PhotoHeight-HighRes}">
-{LinkCloseTag}
-</div>
+    <div class="photo-wrapper">
+        <div class="photo-wrapper-inner">
+        {LinkOpenTag}
+        <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" width="{PhotoWidth-HighRes}" height="{PhotoHeight-HighRes}">
+        {LinkCloseTag}
+        </div>
+    </div>
 
-</div>
-{block:Caption}
-<figcaption class="caption">
-{Caption}
-</figcaption>
-{/block:Caption}
+    {block:Caption}
+        <figcaption class="caption">
+        {Caption}
+        </figcaption>
+    {/block:Caption}
+
 </figure>
+
+<div class="meta-footer">
+    <span><a href="{Permalink}">{TimeAgo}</a></span>
+    {block:NoteCount}
+        <span><a href="{Permalink}">   ·   {NoteCount} Notes</a></span>
+    {/block:NoteCount}
+</div>
+<div class="article-divider"></div>
+
+</article>
 {/block:Photo}
+
+
 
 {/block:Posts}
 </main>

@@ -64,11 +64,10 @@
 
 
 body {
-	/*background: #f5f5f5;*/
 	background: #ffffff;
- 	font-family: 'Raleway', "Helvetica Neue", Arial, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS P Gothic", sans-serif;
+ 	font-family: "Helvetica Neue", Arial, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS P Gothic", sans-serif;
  	font-size: 100%;
- 	line-height: 1.9em;
+ 	-webkit-font-smoothing: antialiased;
 }
 
 .container {
@@ -78,18 +77,16 @@ body {
 
 a:link,a:visited {
 	text-decoration: none;
-	color: #000000;
+	color: #009db2;
 }
 
 a:hover {
-	color: red;
+	color: #007989;
 }
 
 h1 {
-	padding-top: 15px;
-	text-align: left;
+ 	font-family: 'Raleway', "Helvetica Neue", Arial, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS P Gothic", sans-serif;
 	font-size: 300%;
-	font-weight: bold;
 	letter-spacing: -0.03em;
 	line-height: 30%;
 	font-weight: 700;
@@ -98,78 +95,87 @@ h1 {
 
 header {
 	text-align: center;
+	padding: 120px 0 60px 0;
 }
 
 h1.title > a:link{
 	color: #009db2;
 }
 
-h1 a:hover{
-	color: #5d5d5d;
-}
-
 #description {
+ 	font-family: 'Raleway', "Helvetica Neue", Arial, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS P Gothic", sans-serif;
 	font-weight: 300;
-	font-size: 120%;
 	line-height: 0px;
 	letter-spacing: -0.02em;
 	color: #474a4d;
 }
 
 /* Navigation */
+nav {
+	font-family: 'Raleway', "Helvetica Neue", Arial, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS P Gothic", sans-serif;
+	margin-top: 80px;
+}
+
 ul#navigation{
 	display: table;
 	table-layout: fixed;
-	width: 100%;
-	margin-top: 50px;
+	width: 80%;
 	padding: 0;
+	margin: 0 auto;
+	text-transform: uppercase;
 }
 
 ul#navigation li{
 	font-size: 95%; 
 	display: table-cell;
 	list-style: none;
-	font-weight: 300;
-	font-style: italic;
-	border-bottom: 1px solid #5c5c5c;
-	text-align: left;
+	text-align: center;
 }
 
 
 /* Article */
+.article-divider {
+	border: 0;
+	border-bottom: 5px solid #ddd;
+	width: 8%;
+	margin: 0 auto;
+	padding-top: 120px;
+}
+
 article {
-	padding: 40px 0;
-	border-bottom: 1px solid #5c5c5c;
+	padding: 60px 0 40px 0;
+	font-size: 105%;
+	line-height: 2;
+ 	color: #4f5759;
 }
 
 /* 記事タイトル*/
 h2 {
-	font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
-	font-size: 170%;
+	font-size: 200%;
 	margin: 0px;
-	/*padding-bottom: 10px;*/
 	color: #009db2;
 }
 
 /* 記事見出し*/
 h3 {
-	font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
 	margin: 0px;
 	padding-bottom: 10px;
 	padding: 0;
 	color: #009db2;
-	/*line-height: 0px;*/
+	font-size: 120%;
 }
 
 /* 日付･タグ */
 div.date,div.tags {
 	font-weight: 300;
 	margin: 0px;
-	padding: 0px;
+	padding-bottom: 10px;
+	font-size: 120%;
 }
 
 div.date {
 	padding-top: 10px;
+	font-family: "Helvetica Neue", Arial, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS P Gothic", sans-serif;
 }
 div.tags {
 	margin-top: 5px;
@@ -204,6 +210,8 @@ div.tags ul li{
 
 div.content {
 	margin-top: 30px;
+	font-size: 105%;
+	line-height: 2;
 }
 /* ソースコード */
 pre{
@@ -249,7 +257,6 @@ div.amazlet-box {
 }
 .amazlet-info {
 	font-size: 90%;
- 	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS P Gothic", Arial, sans-serif;
 }
 
 /** Image **/
@@ -284,16 +291,23 @@ figcaption.caption blockquote {
 }
 
 
+.meta-footer {
+ 	font-family: 'Open Sans', "Helvetica Neue", Arial, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS P Gothic", sans-serif;
+	font-size: 90%;
+	padding-top: 3%;
+}
 /* Footer */
 footer {
-	padding: 10px 0;
+ 	font-family: 'Open Sans', "Helvetica Neue", Arial, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS P Gothic", sans-serif;
+	padding: 10px 0 60px 0;
 	margin: 30px 0;
-	font-size: 100%;
-	text-align: right;
+	font-size: 90%;
+	text-align: center;
 	font-weight: 300;
-	font-style: italic;
 	line-height: 1.4em;
+	color: #4f5759;
 }
+
 
 
 /* ==========テスト =========== */
@@ -328,11 +342,38 @@ footer {
 body {
 	font-size: 15px;
   }
+
 .container {
 	max-width: 480px;
 	padding-left: 6%;
 	padding-right: 6%;
 }
+
+header {
+	text-align: center;
+	padding: 30px 0 15px 0;
+}
+
+nav {
+	display: none;
+}
+
+article {
+	padding: 30px 0;
+}
+
+.article-divider {
+	padding-top: 60px;
+}
+
+div.date {
+	font-size: 90%;
+}
+h2 {
+	font-size: 150%;
+}
+
+
 img {
 	max-width: 100%;
 	height: auto;
