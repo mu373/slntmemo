@@ -9,17 +9,10 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-        <title>
-            {block:SearchPage}
-                ({lang:Search results for SearchQuery})
-            {/block:SearchPage}
-            {block:PermalinkPage}
-                {block:PostSummary}{PostSummary} | {/block:PostSummary}
-            {/block:PermalinkPage}{Title}</title>
+        <meta http-equiv="Content-Style-Type" content="text/css">
 
         {block:Description}
-        <meta name="description" content="{MetaDescription}">
+        <meta name="description" content="{block:PostSummary}{PostSummary}{/block:PostSummary}{Description}" /> 
         {/block:Description}
 
         <title>{block:PostTitle}{PostTitle} | {/block:PostTitle}{Title}</title>
@@ -35,15 +28,16 @@
         <link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}">
         <link rel="alternate" type="application/rss+xml" href="{RSS}">
         
-        <link rel="stylesheet" href="https://rawgithub.com/mu373/slntmemo/master/normalize.css-master/normalize.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script type="text/javascript" src="https://dl.dropboxusercontent.com/s/vzfccnteijx59l9/prettify.js"></script>
 
         <link rel="stylesheet" href="https://dl.dropboxusercontent.com/s/gbezhmk2b6ukpp4/tomorrow.css">
+
         <link rel="stylesheet" href="https://dl.dropboxusercontent.com/s/6nrorhbq9yp9ihd/style.css">
 
-        <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+        <!-- <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'> -->
         <link href='http://fonts.googleapis.com/css?family=Raleway:300,700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 
@@ -67,8 +61,8 @@
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-48586619-1', 'tumblr.com');
+  ga('require', 'displayfeatures');
   ga('send', 'pageview');
-
 </script>
 
         <!-- HTML5 Shiv -->
@@ -107,6 +101,9 @@
 
         {block:Body}
         <div class="content">{Body}</div>
+        {block:More}
+            <a href="{Permalink}" class="read_more">// 続きを読む</a>
+        {/block:More}
         {/block:Body}
     {/block:Text}
 
@@ -158,21 +155,37 @@
                 {/block:Tags}
             </span>
         {/block:HasTags}
+
     </div>
 
     {block:Date}
+    {/block:Date}
+
+{block:PermalinkPage}
     <div class="tumblr-controls">
         <ul class="like_and_reblog_buttons">
             <li>{ReblogButton}</li>
             <li>{LikeButton}</li>
         </ul>
     </div>
-    {/block:Date}
+
+    <div class="share">
+        <div class="twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-via="mu373" data-count="vertical">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div>
+
+        <div class="facebook"><iframe src="//www.facebook.com/plugins/like.php?href={Permalink}&amp;width&amp;layout=box_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=65&amp;appId=298722706880596" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:65px;" allowTransparency="true"></iframe></div>
+
+        <div class="pocket"><a data-pocket-label="pocket" data-pocket-count="vertical" class="pocket-btn" data-lang="en"></a><script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script></div>
+        
+        <div class="hatena"><a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="vertical-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></div>
+    </div>
+{/block:PermalinkPage}
 
     {block:PostNotes}
       <h3 class="notecount-header">{NoteCount} Notes</h3>
-      <div class="notecontainer">{PostNotes}</div>
+      <div class="notecontainer">{PostNotes}</div>    
     {/block:PostNotes}
+
+
 </div>
 
 
