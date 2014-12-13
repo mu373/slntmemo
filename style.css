@@ -100,9 +100,8 @@ article {
 /* 記事タイトル*/
 h2 {
 	font-size: 200%;
-	margin: 0px;
 	color: #009db2;
-	margin-top: 10px;
+	margin: 10px 0 20px 0;
 }
 
 /* 記事見出し*/
@@ -167,6 +166,13 @@ div.content div {
  	font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "MS Pゴシック", "MS P Gothic", sans-serif;
 }
 
+/* ハイライト */
+span.highlight {
+	background-color: rgba(255, 241, 0, 0.3);
+	padding: -5px 0 0 0;
+}
+
+
 /* 区切りdot */
 hr {
 	display: block;
@@ -207,11 +213,15 @@ pre{
 	overflow: auto;
 }
 
-pre, code {
+tt, code {
 	font-family: 'Source Code Pro', sans-serif;
 	font-size: 90%;
 	line-height: 1.4;
 	white-space: pre;
+	padding: 0;
+	margin: 0;
+	background-color: rgba(0,0,0,0.04);
+	border-radius: 3px;
 }
 
 /* Amazlet */
@@ -318,7 +328,7 @@ figcaption.caption blockquote {
   padding-right: 5px;
 }
 .share .facebook {
-  width: 47px;
+  width: 69px;
   overflow: hidden;
 }
 
