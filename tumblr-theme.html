@@ -70,6 +70,9 @@
         <script src="http://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js"></script>
 <![endif]-->
 
+<!-- Twemoji -->
+<script src="//twemoji.maxcdn.com/twemoji.min.js"></script>
+
 <!-- No Index -->
 {block:TagPage}
     <meta name="robots" content="noindex,follow"/>
@@ -198,6 +201,11 @@ src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a></span>
 </div>
 
 <div class="article-divider"></div>
+
+<script>
+twemoji.parse(document.body);
+</script>
+
 </article>
 
 {/block:Posts}

@@ -257,6 +257,20 @@ div.amazlet-box {
 	font-size: 90%;
 }
 
+/* ShareHTML*/
+img.link-image {
+	margin-right: 2%;
+	align: left;
+	border: 0;
+}
+span.link-title {
+	font-weight: bold;
+}
+span.link-extract {
+	font-size: 80%;
+	line-height: 0.5;
+}
+
 /** Image **/
 figure {
     display: table;
@@ -288,6 +302,13 @@ figcaption.caption blockquote {
 	max-width: 100%;
 }
 
+/* 絵文字 Twemoji*/
+img.emoji {
+	height: 1em;
+	width: 1em;
+	margin: 0 .05em 0 .1em;
+	vertical-align: -0.1em;
+}
 
 .meta-footer {
  	font-family: 'Open Sans', "Helvetica Neue", Arial, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS P Gothic", sans-serif;
