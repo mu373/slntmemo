@@ -310,6 +310,30 @@ img.emoji {
 	vertical-align: -0.1em;
 }
 
+/* 定義付け */
+div.dictionary {
+	font-family:  Baskerville, Times, 'Times New Roman', Georgia, '游明朝', YuMincho, 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', serif;
+	margin: 10px 0 10px 70px;
+	padding: 0 40px 0 20px;
+	border-left: 3px solid #bcbcbc;
+	color: #585858;
+	font-size: 90%;
+}
+
+.dictionary span.term {
+	font-size: 120%;
+}
+
+.dictionary span.pronounce {
+	color: #767676;
+}
+
+.dictionary span.usage {
+	font-style: italic;
+}
+
+
+
 .meta-footer {
  	font-family: 'Open Sans', "Helvetica Neue", Arial, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS P Gothic", sans-serif;
 	font-size: 90%;
