@@ -168,13 +168,6 @@ div.content div {
  	/*font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "MS Pゴシック", "MS P Gothic", sans-serif;*/
 }
 
-/* ハイライト */
-span.highlight {
-	background-color: rgba(255, 241, 0, 0.3);
-	padding: -5px 0 0 0;
-}
-
-
 /* 区切りdot */
 hr {
 	display: block;
@@ -201,29 +194,6 @@ blockquote {
 	display: block;
 	color: #778284;
 	font-size: 90%;
-}
-
-/* ソースコード */
-pre{
-	margin-top: 1em;
-	padding: 1em 2em;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	-ms-border-radius: 10px;
-	-o-border-radius: 10px;
-	border-radius: 10px;
-	overflow: auto;
-}
-
-tt, code {
-	font-family: 'Source Code Pro', sans-serif;
-	font-size: 90%;
-	line-height: 1.4;
-	white-space: pre;
-	padding: 0;
-	margin: 0;
-	background-color: rgba(0,0,0,0.04);
-	border-radius: 3px;
 }
 
 /* Amazlet */
